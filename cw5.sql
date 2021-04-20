@@ -178,6 +178,7 @@ SELECT imie, nazwisko
 		JOIN ksiegowosc.pensje AS pensje 
 			ON pensje.id_pensji = wynagrodzenie.id_pensji
 	WHERE kwota > 4000 AND kwota < 5000;
+    --WHERE kowta BETWEEN 4000 AND 5000;
 
 --h)
 
@@ -247,5 +248,7 @@ SELECT stanowisko, COUNT(premie.kwota) AS liczba_premii
 	GROUP BY stanowisko;
 
 --p)
+
+DELETE * FROM ksiegowosc.pensje WHERE kwota < 1200
 
 
